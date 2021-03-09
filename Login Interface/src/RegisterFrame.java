@@ -1,3 +1,4 @@
+//To import built-in and user-defined packages into your java source file
 import java.awt.BorderLayout;
 
 import java.awt.EventQueue;
@@ -396,7 +397,7 @@ public class RegisterFrame extends JFrame {
 		JPanel panelClear = new JPanel();
 		panelClear.setBounds(341, 377, 172, 48);
 		panelClear.addMouseListener(new MouseAdapter() {
-			//To clear or reset
+			//To clear or reset all text fields
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				JOptionPane.showConfirmDialog(null, "Are you sure you want to clear your data?", "Warning", JOptionPane.WARNING_MESSAGE,JOptionPane.OK_CANCEL_OPTION);
@@ -454,7 +455,7 @@ public class RegisterFrame extends JFrame {
 		jSPassword2.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(jSPassword2);
 		
-		//Show Password
+		//Give user an option to show Password
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Show Password");
 		chckbxNewCheckBox.setBounds(505, 283, 116, 21);
 		chckbxNewCheckBox.addActionListener(new ActionListener() {
@@ -470,7 +471,8 @@ public class RegisterFrame extends JFrame {
 		});
 		chckbxNewCheckBox.setBackground(new Color(204, 153, 102));
 		contentPane.add(chckbxNewCheckBox);
-
+		
+		
 		setUndecorated(true);
 		lblValidate.setBounds(151, 320, 362, 21);
 		lblValidate.setHorizontalAlignment(SwingConstants.CENTER);

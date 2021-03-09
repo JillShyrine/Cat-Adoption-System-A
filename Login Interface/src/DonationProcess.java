@@ -1,4 +1,5 @@
-import java.awt.BorderLayout;
+
+//To import built-in and user-defined packages into your java source fileimport java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.ImageIcon;

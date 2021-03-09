@@ -1,3 +1,5 @@
+//To import built-in and user-defined packages into your java source file
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -63,6 +65,7 @@ public class SecurityQuestion extends JFrame {
 		contentPane.add(CloseButton);
 		CloseButton.addMouseListener(new MouseAdapter() {
 			@Override
+			//Close button function and confirmation
 			public void mouseClicked(MouseEvent e) {
 				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Confirmation", JOptionPane.YES_NO_OPTION) == 0) {
 					SecurityQuestion.this.dispose();
@@ -143,13 +146,17 @@ public class SecurityQuestion extends JFrame {
 		pnlSubmitBackup.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				//Declare variable to be used for this function
 				ForgotPass dev = new ForgotPass();
 				FrameLogin frame = new FrameLogin();
 				String q1, q2,q3,backup;
+				
+				//Get and read input from user
 				q1 = txtquestion1.getText();
 				q2 = txtquestion2.getText();
 				q3 = txtquestion3.getText();
 				backup = txtemailbackup.getText();
+				//Determine whether the text fields are filled, or not.
 				if(q1.equals("") || q2.equals("") || q3.equals("") || backup.contentEquals("")) {
 					JOptionPane.showMessageDialog(null, "Please input all requirements!");
 				} else {
@@ -197,6 +204,7 @@ public class SecurityQuestion extends JFrame {
 		panelbtnClear.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				//Reset or clears all text fields
 				JOptionPane.showConfirmDialog(null, "Are you sure you want to clear your data?", "Warning", JOptionPane.WARNING_MESSAGE,JOptionPane.OK_CANCEL_OPTION);
 				txtquestion1.setText("");
 				txtquestion2.setText("");
@@ -247,6 +255,7 @@ public class SecurityQuestion extends JFrame {
 		lblValidate.setBounds(360, 343, 201, 23);
 		contentPane_1.add(lblValidate);
 		
+		//Back up email for forget password
 		txtemailbackup = new JTextField();
 		txtemailbackup.addKeyListener(new KeyAdapter() {
 			@Override

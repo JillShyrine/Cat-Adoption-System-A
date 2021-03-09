@@ -1,3 +1,5 @@
+//To import built-in and user-defined packages into your java source file
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -157,18 +159,21 @@ public class FrameLogin extends JFrame {
 		pnlBtnLogin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				//To declare variables to be use in this function
 				String user, pass;
+				//To take and read an input from a user
 				user = txtUsername.getText();
 				pass = txtPassword.getText();
+				//To determine whether the user is logged in successfully or not
 				if (username.contains(user)&&password.contains(pass)) {
 					JOptionPane.showMessageDialog(null,"Login Successful!");
 					FrameDashboard second = new FrameDashboard();
 					second.setVisible(true);
 					FrameLogin.this.dispose();
-
+				//To inform the user the missing requirement
 				}else if(username.isEmpty()&&password.isEmpty()) {
 					lblLoginMessage.setText("Please input all requirements!");
-				
+				//If the registered user and password is different from the information being put for log in
 				}else {
 					lblLoginMessage.setText("Username and Password didn't match!");
 				}
@@ -208,6 +213,7 @@ public class FrameLogin extends JFrame {
 		CloseButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				//Confirmation message to confirm exit
 				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Confirmation", JOptionPane.YES_NO_OPTION) == 0) {
 					FrameLogin.this.dispose();
 				}
@@ -231,6 +237,7 @@ public class FrameLogin extends JFrame {
 		pnlBtnSignUp.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				//To determine user if he/she wants to sign up
 				if(JOptionPane.showConfirmDialog(null, "Do you want to create to a new account?", "Confirmation", JOptionPane.YES_NO_OPTION) == 0) {
 					RegisterFrame third = new RegisterFrame();
 					third.setVisible(true);

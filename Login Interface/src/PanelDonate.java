@@ -1,3 +1,4 @@
+//To import built-in and user-defined packages into your java source file
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -21,6 +22,7 @@ public class PanelDonate extends JPanel {
 		setBounds(0,0,524,454);
 		setLayout(null);
 		
+		//To insert and resize the image inside the JLabel.
 		JLabel lbldonate = new JLabel("");
 		lbldonate.setBounds(10, 41, 483, 358);
 		add(lbldonate);

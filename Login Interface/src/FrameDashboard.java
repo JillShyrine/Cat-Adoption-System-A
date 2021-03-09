@@ -1,3 +1,5 @@
+//To import built-in and user-defined packages into your java source file
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Image;
@@ -20,6 +22,7 @@ public class FrameDashboard extends JFrame {
 	
 	private Image img_logo = new ImageIcon(FrameLogin.class.getResource("res/logo.png")).getImage().getScaledInstance(250, 200, Image.SCALE_SMOOTH);
 	
+	//Other working menu buttons, redirects user to a different panel/option
 	private JPanel contentPane;
 	
 	private PanelHome panelHome;
@@ -181,6 +184,7 @@ public class FrameDashboard extends JFrame {
 		JLabel lblClose = new JLabel("X");
 		lblClose.addMouseListener(new MouseAdapter() {
 			@Override
+			//Close function and Confirmation
 			public void mouseClicked(MouseEvent e) {
 				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Confirmation", JOptionPane.YES_NO_OPTION) == 0) {
 					FrameDashboard.this.dispose();
@@ -205,7 +209,6 @@ public class FrameDashboard extends JFrame {
 		panelMainContent.setBounds(305, 20, 524, 454);
 		contentPane.add(panelMainContent);
 		panelMainContent.setLayout(null);
-		//Create muna kayo ng panel tas after nun eto lagay niyo para maconnect niyo mga nagawa niyong panel. 
 		panelMainContent.add(panelHome);
 		panelMainContent.add(panelAbout);
 		panelMainContent.add(panelAdopt);

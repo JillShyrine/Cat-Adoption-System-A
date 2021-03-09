@@ -176,7 +176,7 @@ public class SetNewPass extends JFrame {
 		lblNewLabel_3_3_2.setBounds(46, 287, 237, 13);
 		contentPane_1.add(lblNewLabel_3_3_2);
 		
-		JLabel lblNewLabel_3_3_3 = new JLabel("You can set your new username or use your previouse one");
+		JLabel lblNewLabel_3_3_3 = new JLabel("You can set your new username or use your previous one");
 		lblNewLabel_3_3_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel_3_3_3.setBounds(46, 140, 455, 28);
 		contentPane_1.add(lblNewLabel_3_3_3);

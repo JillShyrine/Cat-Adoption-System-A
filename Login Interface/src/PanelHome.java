@@ -1,3 +1,4 @@
+//To import built-in and user-defined packages into your java source file
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -16,6 +17,7 @@ public class PanelHome extends JPanel {
 		setBounds(0,0,524,454);
 		setLayout(null);
 		
+		//To insert and resize the image inside the JLabel.
 		JLabel lblhome = new JLabel("");
 		lblhome.setBounds(10, 78, 504, 314);
 		lblhome.setIcon(new ImageIcon(img_home));

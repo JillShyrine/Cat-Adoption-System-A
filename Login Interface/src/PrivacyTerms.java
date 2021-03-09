@@ -1,3 +1,4 @@
+//To import built-in and user-defined packages into your java source file
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -65,6 +66,7 @@ public class PrivacyTerms extends JFrame {
 		JLabel CloseButton = new JLabel("X");
 		CloseButton.addMouseListener(new MouseAdapter() {
 			@Override
+			//Close function and confirmation
 			public void mouseClicked(MouseEvent e) {
 				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Confirmation", JOptionPane.YES_NO_OPTION) == 0) {
 					PrivacyTerms.this.dispose();
@@ -84,6 +86,7 @@ public class PrivacyTerms extends JFrame {
 		CloseButton.setBounds(570, 0, 30, 30);
 		panel.add(CloseButton);
 		
+		//Allows user to scroll up and down
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBackground(Color.DARK_GRAY);
 		scrollPane.setBounds(20, 91, 551, 235);
@@ -95,7 +98,7 @@ public class PrivacyTerms extends JFrame {
 		scrollPane.setViewportView(txtpnPrivacyPolicyLast);
 		txtpnPrivacyPolicyLast.setText("Privacy Policy\r\n\r\nLast updated: March 7, 2021\r\n\r\nAdopt Neko operates http://www.adoptneko.com. This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.\r\n\r\nWe use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.\r\n\r\nInformation Collection And Use\r\n\r\nWhile using our Site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to your name.\r\n\r\nLog Data\r\n\r\nLike many site operators, we collect information that your browser sends whenever you visit our Site AdoptNeko.com.\r\n\r\nThis Log Data may include information such as your computer's Internet Protocol address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages and other statistics.\r\n\r\nIn addition, we may use third party services such as Google Analytics that collect, monitor and analyze this \u2026\r\n\r\nCommunications\r\n\r\nWe may use your Personal Information to contact you with newsletters, marketing or promotional materials and other information that ...\r\n\r\n\r\nCookies\r\n\r\nCookies are files with small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer's hard drive.\r\n\r\nLike many sites, we use \"cookies\" to collect information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Site.\r\n\r\nSecurity\r\n\r\nThe security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.\r\n\r\nChanges To This Privacy Policy\r\n\r\nThis Privacy Policy is effective as of February 16 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.\r\n\r\nWe reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.\r\n\r\nIf we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.\r\n\r\nContact Us\r\n\r\nIf you have any questions about this Privacy Policy, please contact us.\r\n");
 		
-		
+		//Confirms that the user had finished reading the policy and hereby agrees
 		JCheckBox PrivacyCheckBox = new JCheckBox("Check here to indicate that you have read and agree to the Privacy Policy of Adopt Neko");
 		PrivacyCheckBox.setBackground(new Color(255, 153, 153));
 		PrivacyCheckBox.setBounds(20, 324, 551, 21);
@@ -105,11 +108,14 @@ public class PrivacyTerms extends JFrame {
 		pnlAgreeButton.addMouseListener(new MouseAdapter() {
 			
 			@Override
+			//Determines if user agreed in the  Privacy Term and Policies
 			public void mouseClicked(MouseEvent e) {
 				boolean checkbox;
 				checkbox = PrivacyCheckBox.isSelected();
+				//Reminds user to check the box in order to proceed
 				if(checkbox == false) {
 					JOptionPane.showMessageDialog(null,"Please Check the box if you want to proceed!");
+				//Proceed
 				} else {
 					PrivacyTerms.this.dispose();
 					
