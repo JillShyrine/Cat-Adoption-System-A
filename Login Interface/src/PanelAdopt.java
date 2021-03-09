@@ -65,6 +65,7 @@ public class PanelAdopt extends JPanel {
 		add(panelAdoptcat);
 		panelAdoptcat.setLayout(null);
 		
+		
 		JLabel lblAdopt = new JLabel("ADOPT ME!");
 		lblAdopt.setBounds(7, 5, 116, 33);
 		lblAdopt.setFont(new Font("Cher Faust", Font.PLAIN, 20));

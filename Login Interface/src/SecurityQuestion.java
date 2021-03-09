@@ -256,6 +256,7 @@ public class SecurityQuestion extends JFrame {
 		contentPane_1.add(lblValidate);
 		
 		//Back up email for forget password
+		//Determines whether entered email is valid
 		txtemailbackup = new JTextField();
 		txtemailbackup.addKeyListener(new KeyAdapter() {
 			@Override

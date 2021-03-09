@@ -1,3 +1,4 @@
+//To import built-in and user-defined packages into your java source file
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -70,7 +71,6 @@ public class SetNewPass extends JFrame {
 		panel.setBackground(Color.GRAY);
 		panel.setBounds(0, 0, 646, 78);
 		contentPane_1.add(panel);
-		
 		JLabel lblSetYourNew = new JLabel("Set your New Password");
 		lblSetYourNew.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSetYourNew.setFont(new Font("Cher Faust", Font.PLAIN, 26));
@@ -80,6 +80,7 @@ public class SetNewPass extends JFrame {
 		JLabel CloseButton = new JLabel("X");
 		CloseButton.addMouseListener(new MouseAdapter() {	
 			@Override
+			//Close function and Confirmation
 			public void mouseClicked(MouseEvent e) {
 				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Confirmation", JOptionPane.YES_NO_OPTION) == 0) {
 					SetNewPass.this.dispose();
@@ -120,6 +121,7 @@ public class SetNewPass extends JFrame {
 				newpass = jSPassword.getText();
 				newpass2 = jSPassword.getText();
 				
+				//Condition to determine whether all require text fields are filled
 				if(userr.equals("")|| newpass.equals("")|| newpass2.equals("")) {
 					JOptionPane.showMessageDialog(null, "Please input all requirements!");
 				} else if(!(new String(jSPassword.getPassword()).equals(new String(jSPassword2.getPassword())))) { 
@@ -130,6 +132,7 @@ public class SetNewPass extends JFrame {
 					creates.Back();
 					creates.setVisible(true);
 					
+					//Tells user password is successfully updated
 					JOptionPane.showMessageDialog(null, "Successfully Updated your password!");
 					SetNewPass.this.dispose();
 					FrameLogin framelogin = new FrameLogin();

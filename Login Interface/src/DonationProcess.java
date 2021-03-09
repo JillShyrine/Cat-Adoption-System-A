@@ -174,7 +174,7 @@ public class DonationProcess extends JFrame {
 				
 				//check for number 0 to 9
 				if(e.getKeyChar()>='0' && e.getKeyChar()<='9') {
-					//check fot the length not more than 11 digit
+					//check for the length not more than 11 digit
 					if(length<3) {
 						txtCVC.setEditable(true);
 					} else {
@@ -277,7 +277,7 @@ public class DonationProcess extends JFrame {
 				
 				//check for number 0 to 9
 				if(e.getKeyChar()>='0' && e.getKeyChar()<='9') {
-					//check fot the length not more than 10 digit
+					//check for the length not more than 10 digit
 					if(length<12) {
 						txtOther.setEditable(true);
 					} else {
@@ -302,6 +302,7 @@ public class DonationProcess extends JFrame {
 				name = txtName.getText();
 				card = txtCardNum.getText();
 				other = txtOther.getText();
+				//To determine whether the user successfully entered all requirements
 				if(name.equals("")||card.equals("")) {
 					lblValidate1.setText("Please input all Requirements!");
 				}else if(!(rdb250.isSelected() || rdb500.isSelected() || rdb1k.isSelected() || rdb2k.isSelected() 

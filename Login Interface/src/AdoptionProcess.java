@@ -1,3 +1,4 @@
+//To import built-in and user-defined packages into your java source file
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Image;

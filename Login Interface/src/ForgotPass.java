@@ -136,7 +136,7 @@ public class ForgotPass extends JFrame {
 				String PATTERN = "^[a-zA-Z0-9]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
 			Pattern patt = Pattern.compile(PATTERN);
 			Matcher match = patt.matcher(txtemailfp.getText());
-			//Condition to determine whether both mall is the same
+			//Condition to determine whether both email is the same
 			if(!match.matches()) {
 				lblValidate.setText("Invalid Email!");
 			} else {

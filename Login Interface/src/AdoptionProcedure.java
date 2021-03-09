@@ -106,7 +106,7 @@ public class AdoptionProcedure extends JFrame {
 		CloseButton.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		CloseButton.setBounds(442, 0, 30, 30);
 		panel.add(CloseButton);
-		
+		//Changes fonts and font size
 		JLabel lblNewLabel = new JLabel("Please answer the following:");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel.setBounds(390, 87, 195, 23);
@@ -241,6 +241,10 @@ public class AdoptionProcedure extends JFrame {
 		JPanel panelbtnAdopt = new JPanel();
 		panelbtnAdopt.addMouseListener(new MouseAdapter() {
 			@Override
+			//For Adoption process
+			//Determines the user preferred method in adopting
+			//Ask for user's valid address
+			//Ask user for preferred date of adoption
 			public void mouseClicked(MouseEvent e) {
 				String address;
 				Date date;
@@ -248,9 +252,11 @@ public class AdoptionProcedure extends JFrame {
 				address = txtAddress.getText();
 				date = dateChooser.getDate();
 				privacy = PrivacyTerms.isSelected();
+				//Conditions for the process
 				if(!(rdbPickup.isSelected() || rdbDeliver.isSelected())){
 					lblValidate.setText("Please choose your method of adoption!");
-				} else if(rdbDeliver.isSelected() && address.equals("")) {
+				  
+				} else if(rdbDeliver.isSelected() && address.equals("")) { 
 					lblValidate.setText("Please input your address!");
 				} else if(rdbPickup.isSelected() && date == null) {
 					lblValidate.setText("Please input date for your Pick up!");
